@@ -48,6 +48,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           </div>
         </div>
       </section>
+
+      <section class="featured-image">
+        <img src=https://res.cloudinary.com/moyadev/image/upload/v1730722315/sena/work_ixpg4z.svg alt="Work life trampoline" />
+      </section>
+      
     </main>
     <Footer />
 
@@ -171,6 +176,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         margin: 0;
         font-size: 0.9em;
         font-weight: 300;
+      }
+
+      .featured-image {
+        padding: 2em 0;
+        text-align: center;
+      }
+
+      .featured-image img {
+        max-width: 800px;  /* adjust this value based on your needs */
+        width: 100%;
+        height: auto;
+        border-radius: 12px;  /* optional: rounds the corners */
+        box-shadow: var(--box-shadow);  /* optional: adds depth */
       }
 
       @media (max-width: 720px) {
