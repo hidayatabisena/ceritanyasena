@@ -1,0 +1,195 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>The Map of Tiny Little Things</h1>
+          <p class="description">
+            Siapa yang setia pada perkara yang kecil, kepadanya akan dipercayakan perkara-perkara yang besar. ~ Filosofi Suku Nias
+          </p>
+          <div class="cta-buttons">
+            <a href="/blog" class="primary-button">Baca cerita</a>
+            <a href="/about" class="secondary-button">Tentang Sena</a>
+          </div>
+        </div>
+        <div class="hero-background"></div>
+      </div>
+
+      <section class="features">
+        <h2>Kerjanya ngapain?</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>🚀 Bangun Bisnis</h3>
+            <p>Sama sekali bukan kerjaan yang keren tapi satu-satunya pilihan yang tersedia.</p>
+          </div>
+          <div class="feature-card">
+            <h3>🎨 Bikin Produk</h3>
+            <p>Khususnya produk software yang digunakan oleh banyak pihak.</p>
+          </div>
+          <div class="feature-card">
+            <h3>📱 Kelola Bisnis</h3>
+            <p>Konsekuensi logis dari tanggung jawab membangun bisnis.</p>
+          </div>
+          <div class="feature-card">
+            <h3>🔍 Bangun Relasi</h3>
+            <p>Ngimbangin hidup supaya ada tunas baru di setiap waktu luang.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <style>
+      .hero {
+        position: relative;
+        padding: 4em 0;
+        margin: -3em 0 2em 0;
+        background: rgb(var(--black));
+        overflow: hidden;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 1em;
+        text-align: center;
+        color: white;
+      }
+
+      .hero-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100%;
+        background: radial-gradient(circle at center, var(--accent) 0%, transparent 70%);
+        opacity: 0.1;
+        filter: blur(60px);
+      }
+
+      .description {
+        font-size: 1.2em;
+        color: rgb(var(--gray-light));
+        margin: 1em 0 2em 0;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+      }
+
+      .primary-button, .secondary-button {
+        padding: 0.8em 1.6em;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        font-family: var(--font-heading);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.9em;
+      }
+
+      .primary-button {
+        background: var(--ai-gradient);
+        color: white;
+      }
+
+      .secondary-button {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .primary-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3);
+      }
+
+      .secondary-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .features {
+        padding: 4em 0;
+      }
+
+      .features h2 {
+        text-align: center;
+        margin-bottom: 2em;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2em;
+      }
+
+      .feature-card {
+        padding: 1.5em;
+        border-radius: 12px;
+        background: white;
+        box-shadow: var(--box-shadow);
+        transition: transform 0.2s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-card h3 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+        color: rgb(var(--black));
+      }
+
+      .feature-card p {
+        color: rgb(var(--gray));
+        margin: 0;
+        font-size: 0.9em;
+        font-weight: 300;
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          padding: 3em 0;
+        }
+
+        .description {
+          font-size: 1em;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+        }
+
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </body>
+</html>
