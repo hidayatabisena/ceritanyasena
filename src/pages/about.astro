@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { Image } from 'astro:assets';
 ---
 
 <Layout
@@ -64,12 +65,40 @@ import Layout from '../layouts/BlogPost.astro';
 
 	<hr>
 
-	<img src="https://res.cloudinary.com/moyadev/image/upload/v1642555800/sena/poter_email_cvhed0.png" alt="Mayar Connect Event">
+	<Image 
+        src="https://res.cloudinary.com/moyadev/image/upload/v1642555800/sena/poter_email_cvhed0.png"
+        alt="Mayar Connect Event"
+        width={800}
+        height={450}
+        format="webp"
+        loading="lazy"
+    />
 
-	<img src="https://res.cloudinary.com/moyadev/image/upload/v1689572912/Moyadev/screenshot_llfxad.jpg" alt="Apple Vision">
+    <Image 
+        src="https://res.cloudinary.com/moyadev/image/upload/v1689572912/Moyadev/screenshot_llfxad.jpg"
+        alt="Apple Vision"
+        width={800}
+        height={450}
+        format="webp"
+        loading="lazy"
+    />
 
-	<img src="https://res.cloudinary.com/moyadev/image/upload/v1716604767/bernadya.jpg" alt="Success Team">
+    <Image 
+        src="https://res.cloudinary.com/moyadev/image/upload/v1716604767/bernadya.jpg"
+        alt="Success Team"
+        width={800}
+        height={450}
+        format="webp"
+        loading="lazy"
+    />
 
-	<img src="https://res.cloudinary.com/moyadev/image/upload/v1639445126/sena/kalaweit_s2uxjr.png" alt="Kalaweit Indonesia">
+    <Image 
+        src="https://res.cloudinary.com/moyadev/image/upload/v1639445126/sena/kalaweit_s2uxjr.png"
+        alt="Kalaweit Indonesia"
+        width={800}
+        height={450}
+        format="webp"
+        loading="lazy"
+    />
 
 </Layout>
