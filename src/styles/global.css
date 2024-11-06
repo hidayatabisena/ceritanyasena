@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
 :root {
   --accent: #2337ff;
@@ -16,6 +17,7 @@
   --font-mono: 'JetBrains Mono', monospace;
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-logo: 'Reenie Beanie', sans-serif;
 }
 
 body {
@@ -42,20 +44,20 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(var(--black));
   line-height: 1.2;
   font-weight: 700;
-  font-family: var(--font-heading);
+  font-family: var(--font-logo);
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   background: var(--ai-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2.5em; }
 h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 
